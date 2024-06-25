@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     const ITEMS_PER_LOAD = 10;
 
-    // Fetch products from the API
+
     const fetchProducts = async () => {
         try {
             loadingIndicator.style.display = 'block';
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) throw new Error('Network response was not ok');
             products = await response.json();
 
-            filterAndSortProducts(); // Initial render
+            filterAndSortProducts();
             loadMoreButton.style.display = 'block';
             loadingIndicator.style.display = 'none';
         } catch (error) {
@@ -29,23 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Render products to the DOM
-   const renderProducts = () => {
-    const fragment = document.createDocumentFragment();
-    const itemsToShow = displayedProducts.slice(currentIndex, currentIndex + ITEMS_PER_LOAD);
 
-    itemsToShow.forEach(product => {
-        const productElement = document.createElement('div');
-        productElement.className = 'col-md-4 product';
+    const renderProducts = () => {
+        const fragment = document.createDocumentFragment();
+        const itemsToShow = displayedProducts.slice(currentIndex, currentIndex + ITEMS_PER_LOAD);
 
-        // Modify title to show only first three words
-        const words = product.title.split(' ');
-        const truncatedTitle = words.slice(0, 3).join(' ');
+        itemsToShow.forEach(product => {
+            const productElement = document.createElement('div');
+            productElement.className = 'col-md-4 product';
 
-        // Create link for details page
-        const productLink = document.createElement('a');
-        productLink.href = `details.html?id=${product.id}`; // Assuming you have a details.html for product details
-        productLink.innerHTML = `
+
+            const words = product.title.split(' ');
+            const truncatedTitle = words.slice(0, 3).join(' ');
+
+
+            const productLink = document.createElement('a');
+            productLink.href = `details.html?id=${product.id}`;
+            productLink.innerHTML = `
             <div class="image-wrapper">
                 <img src="${product.image}" alt="${product.title}" class="img-fluid">
             </div>
@@ -55,24 +55,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class='heart'>&#9825;</span>
             </div>
         `;
-        productElement.appendChild(productLink);
-        fragment.appendChild(productElement);
-    });
-
-    productContainer.appendChild(fragment);
-    currentIndex += ITEMS_PER_LOAD;
-
-    // Add event listeners to heart icons
-    document.querySelectorAll('.heart-icon .heart').forEach(heart => {
-        heart.addEventListener('click', () => {
-            heart.classList.toggle('red');
+            productElement.appendChild(productLink);
+            fragment.appendChild(productElement);
         });
-    });
-};
+
+        productContainer.appendChild(fragment);
+        currentIndex += ITEMS_PER_LOAD;
+
+
+        document.querySelectorAll('.heart-icon .heart').forEach(heart => {
+            heart.addEventListener('click', () => {
+                heart.classList.toggle('red');
+            });
+        });
+    };
 
 
 
-    // Filter and sort products
+
     const filterAndSortProducts = () => {
         let filteredProducts = products;
 
@@ -98,11 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
         productContainer.innerHTML = '';
         renderProducts();
 
-        // Update total items count
         totalItemsElement.textContent = displayedProducts.length;
     };
 
-    // Event listeners for checkboxes and price sort dropdown
+
     categoryCheckboxes.forEach(checkbox => checkbox.addEventListener('change', filterAndSortProducts));
     priceSort.addEventListener('change', filterAndSortProducts);
 

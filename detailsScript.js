@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const titleElement = document.getElementById('title');
     const priceElement = document.getElementById('price');
     const offersElement = document.getElementById('offers');
-    const mainImages = document.getElementById('imgData'); // Updated to match your HTML structure
-    const mainImage = document.getElementById('imgs'); // Assuming this is where the main image goes
+    const mainImages = document.getElementById('imgData');
+    const mainImage = document.getElementById('imgs'); 
     const quantityInput = document.getElementById('quantity');
     const increaseBtn = document.getElementById('increase-btn');
     const decreaseBtn = document.getElementById('decrease-btn');
 
     let currentQuantity = 1;
-    let currentProduct = null; // This will hold the product details
+    let currentProduct = null;
 
     const fetchProductDetails = async () => {
         try {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('Network response was not ok');
             }
             const product = await response.json();
-            currentProduct = product; // Store the product details
+            currentProduct = product; 
             displayProductDetails(product);
         } catch (error) {
             console.error('Error fetching product details:', error);
@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
         titleElement.textContent = product.title;
         priceElement.textContent = `₹${product.price}`;
 
-        // Clear previous offers
+     
         offersElement.innerHTML = '';
 
-        // Display offers if available
+       
         if (product.offers && product.offers.length > 0) {
             product.offers.forEach(offer => {
                 const li = document.createElement('li');
@@ -50,17 +50,17 @@ document.addEventListener('DOMContentLoaded', () => {
             offersElement.textContent = 'No offers available';
         }
 
-        // Update main image
+      
         mainImage.src = product.image;
         mainImage.alt = product.title;
         mainImages.src = product.image;
         mainImages.alt = product.title;
 
-        // Update quantity input value
+      
         quantityInput.value = currentQuantity;
     };
 
-    // Event listeners for quantity buttons
+   
     increaseBtn.addEventListener('click', () => {
         currentQuantity++;
         quantityInput.value = currentQuantity;
@@ -73,14 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Event listener for Add to Cart button
+
     document.getElementById('add-cart').addEventListener('click', () => {
         const item = {
             id: productId,
             title: titleElement.textContent,
             price: priceElement.textContent,
             quantity: currentQuantity,
-            image: currentProduct.image // Get the image from the current product details
+            image: currentProduct.image 
         };
         addToCart(item);
     });

@@ -1,13 +1,13 @@
 body {
     background-color: #f8f9fa;
     overflow-x: hidden;
-    /* Prevent horizontal scroll */
+
 }
 
 body {
     background-color: #f8f9fa;
     overflow-x: hidden;
-    /* Prevent horizontal scroll */
+
 }
 
 .navbar {
@@ -43,14 +43,14 @@ body {
 
 #cart-icon svg {
     color: #f8f9fa;
-    /* Ensure the icon has the desired initial color */
+
     font-size: 200px;
     font-weight: bold;
 }
 
 #cart-icon:hover svg {
     color: #f8f9fa;
-    /* Prevent color change on hover */
+
 }
 
 #cart-count {
@@ -112,30 +112,30 @@ body {
 
 footer {
     background-color: #f8f9fa;
-    /* Light background color */
+
     color: #000000;
-    /* Black text color */
+
     padding: 40px 0;
 }
 
 footer p {
     margin-bottom: 0;
-    /* Remove default margin for paragraphs */
+
 }
 
 footer a {
     color: #000000;
-    /* Black link color */
+
 }
 
 footer a:hover {
     color: #007bff;
-    /* Bootstrap's default link hover color */
+
 }
 
 #price-sort {
     max-width: 200px;
-    /* Adjust the width as needed */
+
 
 }
 
@@ -172,13 +172,14 @@ footer a:hover {
     font-size: 36px;
     cursor: pointer;
     color: #000;
-    /* Default color */
+
 }
 
 .heart.red {
     color: red;
-    /* Color when clicked */
+
 }
+
 .product a {
     text-decoration: none;
     color: black;

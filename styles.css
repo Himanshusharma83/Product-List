@@ -1,7 +1,7 @@
 body {
     background-color: #f8f9fa;
     overflow-x: hidden;
-    /* Prevent horizontal scroll */
+
 }
 
 .navbar {
@@ -30,21 +30,21 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    /* text-align: left; */
+
     padding-left: 55px;
     color: #333;
 }
 
 #cart-icon svg {
     color: #f8f9fa;
-    /* Ensure the icon has the desired initial color */
+
     font-size: 200px;
     font-weight: bold;
 }
 
 #cart-icon:hover svg {
     color: #f8f9fa;
-    /* Prevent color change on hover */
+
 }
 
 #cart-count {
@@ -78,40 +78,40 @@ body {
 
 .carousel-item img {
     height: 400px;
-    /* Adjust height as needed */
+
 }
 
 .carousel-caption {
     text-align: left;
-    /* Align text to the left */
+
     padding-left: 70px;
-    /* Add some padding for better readability */
+
 }
 
 .jumbotron {
     background-color: #fff;
 }
 
-/* Custom CSS for Footer */
+
 footer {
     background-color: #f8f9fa;
-    /* Light background color */
+
     color: #000000;
-    /* Black text color */
+
     padding: 40px 0;
 }
 
 footer p {
     margin-bottom: 0;
-    /* Remove default margin for paragraphs */
+
 }
 
 footer a {
     color: #000000;
-    /* Black link color */
+
 }
 
 footer a:hover {
     color: #007bff;
-    /* Bootstrap's default link hover color */
+
 }
