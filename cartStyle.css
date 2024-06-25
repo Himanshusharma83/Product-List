@@ -1,0 +1,147 @@
+body {
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+.navbar {
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    width: 100px;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: white !important;
+}
+
+.nav-item .nav-link:hover {
+    color: #ccc !important;
+}
+
+#cart-icon {
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* text-align: left; */
+    padding-left: 55px;
+    color: #333;
+}
+
+#cart-icon svg {
+    color: #f8f9fa;
+    /* Ensure the icon has the desired initial color */
+    font-size: 200px;
+    font-weight: bold;
+}
+
+#cart-icon:hover svg {
+    color: #f8f9fa;
+    /* Prevent color change on hover */
+}
+
+#cart-count {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    background: black;
+    color: white;
+    border-radius: 100%;
+    padding: 2px 5px;
+    font-size: 0.7rem;
+}
+
+#carouselExampleIndicators {
+    background-color: rgb(226, 226, 226);
+    margin-top: 4%;
+}
+
+.container {
+    padding: 20px;
+}
+
+.cards {
+    margin-top: -40px;
+}
+
+.card-body {
+    background-color: rgb(146, 146, 146);
+    color: #fff;
+}
+
+.carousel-item img {
+    height: 400px;
+    /* Adjust height as needed */
+}
+
+.carousel-caption {
+    text-align: left;
+    /* Align text to the left */
+    padding-left: 70px;
+    /* Add some padding for better readability */
+}
+
+.jumbotron {
+    background-color: #fff;
+}
+
+/* Custom CSS for Footer */
+footer {
+    background-color: #f8f9fa;
+    /* Light background color */
+    color: #000000;
+    /* Black text color */
+    padding: 40px 0;
+}
+
+footer p {
+    margin-bottom: 0;
+    /* Remove default margin for paragraphs */
+}
+
+footer a {
+    color: #000000;
+    /* Black link color */
+}
+
+footer a:hover {
+    color: #007bff;
+  
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item-buttons button {
+    margin: 5px 0;
+}
+

@@ -1,0 +1,276 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cardData {
+    display: flex;
+    margin-bottom: 3%;
+}
+
+.leftData img {
+    width: 366px;
+    margin-inline: 32px;
+}
+
+.leftData {
+    margin-top: 10%;
+}
+
+.cardData .img img {
+    width: 74px;
+    margin-left: 22px;
+    cursor: pointer;
+}
+
+.img {
+    margin-top: 10%;
+}
+
+.cardData .rightData {
+    margin-top: 10%;
+}
+
+.rightData h3,
+.right h1,
+.rightData i,
+.rightData h4,
+.right p {
+    margin-top: 11px;
+}
+
+.rightData h3 {
+    color: gray;
+}
+
+.rightData i {
+    color: green;
+}
+
+#decrease-btn,
+#increase-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ced4da;
+    border-radius: 50%;
+    margin: 0 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#decrease-btn:hover,
+#increase-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.quantity-input {
+    text-align: center;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 50px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+/* Mobile - 320px */
+@media (max-width: 320px) {
+    .leftData img {
+        width: 100px;
+        margin-inline: 10px;
+    }
+
+    .cardData {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardData .img img {
+        width: 50px;
+        margin-left: 10px;
+    }
+
+    .quantity {
+        flex-direction: column;
+    }
+
+    #decrease-btn,
+    #increase-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 0.8rem;
+    }
+
+    .quantity-input {
+        width: 30px;
+    }
+}
+
+/* Tablet - 768px */
+@media (min-width: 321px) and (max-width: 768px) {
+    .leftData img {
+        width: 200px;
+        margin-inline: 20px;
+    }
+
+    .cardData {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardData .img img {
+        width: 60px;
+        margin-left: 15px;
+    }
+
+    .quantity {
+        flex-direction: row;
+    }
+
+    #decrease-btn,
+    #increase-btn {
+        width: 25px;
+        height: 25px;
+        font-size: 0.9rem;
+    }
+
+    .quantity-input {
+        width: 40px;
+    }
+}
+
+/* Desktop Small - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .leftData img {
+        width: 250px;
+        margin-inline: 25px;
+    }
+
+    .cardData {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .cardData .img img {
+        width: 65px;
+        margin-left: 18px;
+    }
+
+    .quantity {
+        flex-direction: row;
+    }
+
+    #decrease-btn,
+    #increase-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+    }
+
+    .quantity-input {
+        width: 45px;
+    }
+}
+
+/* Desktop Medium - 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .leftData img {
+        width: 300px;
+        margin-inline: 28px;
+    }
+
+    .cardData {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .cardData .img img {
+        width: 70px;
+        margin-left: 20px;
+    }
+
+    .quantity {
+        flex-direction: row;
+    }
+
+    #decrease-btn,
+    #increase-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .quantity-input {
+        width: 50px;
+    }
+}
+
+/* Desktop Large - 1440px */
+@media (min-width: 1281px) and (max-width: 1440px) {
+    .leftData img {
+        width: 350px;
+        margin-inline: 30px;
+    }
+
+    .cardData {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .cardData .img img {
+        width: 74px;
+        margin-left: 22px;
+    }
+
+    .quantity {
+        flex-direction: row;
+    }
+
+    #decrease-btn,
+    #increase-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .quantity-input {
+        width: 50px;
+    }
+}
+
+/* Desktop X-Large - 1920px */
+@media (min-width: 1441px) and (max-width: 1920px) {
+    .leftData img {
+        width: 366px;
+        margin-inline: 32px;
+    }
+
+    .cardData {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .cardData .img img {
+        width: 74px;
+        margin-left: 22px;
+    }
+
+    .quantity {
+        flex-direction: row;
+    }
+
+    #decrease-btn,
+    #increase-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .quantity-input {
+        width: 50px;
+    }
+}

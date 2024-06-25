@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesProduct.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="https://venia.magento.com/VeniaLogo-n77.svg" alt="Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="productlist.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Women</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Men</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Smart Gear</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Accessories</a>
+                </li>
+            </ul>
+            <div class="nav-item">
+                <a class="nav-link" href="#" id="cart-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+                    </svg>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="mt-5">
+        <div class="col-md-12">
+            <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2hvcHBpbmd8ZW58MHx8MHx8fDA%3D"
+                class="img-fluid" alt="Slide 1">
+        </div>
+    </div>
+
+    <div class="container filters">
+        <div class="row">
+            <div class="col-md-3">
+                <p class="mt-5 head">Clothing / Women's / Outwear</p>
+                <div class="checkbox-container mt-5">
+                    <h5>Filters</h5>
+                    <hr>
+                    <p class="">Categories</p>
+                    <label>
+                        <input type="checkbox" value="women's clothing" class="category-checkbox"> Women
+                    </label>
+                    <label>
+                        <input type="checkbox" value="men's clothing" class="category-checkbox"> Men
+                    </label>
+                    <label>
+                        <input type="checkbox" value="electronics" class="category-checkbox"> Smart Gear
+                    </label>
+                    <label>
+                        <input type="checkbox" value="jewelery" class="category-checkbox"> Accessories
+                    </label>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <div class="mt-4">
+                        <p><span id="total-items">0</span> Results</p>
+                    </div>
+                    <div class="form-group price-sort mt-4">
+                        <select id="price-sort" class="form-control">
+                            <option value="none">Sort by Price</option>
+                            <option value="asc">Low to High</option>
+                            <option value="desc">High to Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="product-list" class="row"></div>
+                <div id="loading" class="text-center my-4">Loading...</div>
+                <div class="d-flex justify-content-center">
+                    <button id="load-more" class="btn btn-primary col-3 mb-3">Load More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-dark" style="border-top: 1px solid #ced4da;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Account</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Order Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>About Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">© 2024 Your Company. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

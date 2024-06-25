@@ -1,0 +1,185 @@
+body {
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+body {
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+.navbar {
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    width: 100px;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: white !important;
+}
+
+.nav-item .nav-link:hover {
+    color: #ccc !important;
+}
+
+#cart-icon {
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* text-align: left; */
+    padding-left: 55px;
+    color: #333;
+}
+
+#cart-icon svg {
+    color: #f8f9fa;
+    /* Ensure the icon has the desired initial color */
+    font-size: 200px;
+    font-weight: bold;
+}
+
+#cart-icon:hover svg {
+    color: #f8f9fa;
+    /* Prevent color change on hover */
+}
+
+#cart-count {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    background: black;
+    color: white;
+    border-radius: 100%;
+    padding: 2px 5px;
+    font-size: 0.7rem;
+}
+
+
+
+
+
+
+#product-list {
+    margin-top: 20px;
+}
+
+.product {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: none;
+}
+
+.product img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.product h2 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.checkbox-container {
+    margin-bottom: 10px;
+}
+
+.checkbox-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    /* Light background color */
+    color: #000000;
+    /* Black text color */
+    padding: 40px 0;
+}
+
+footer p {
+    margin-bottom: 0;
+    /* Remove default margin for paragraphs */
+}
+
+footer a {
+    color: #000000;
+    /* Black link color */
+}
+
+footer a:hover {
+    color: #007bff;
+    /* Bootstrap's default link hover color */
+}
+
+#price-sort {
+    max-width: 200px;
+    /* Adjust the width as needed */
+
+}
+
+.checkbox-container {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.checkbox-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.filters {
+    margin-top: -2%;
+}
+
+.listImage {
+    margin-top: 5%;
+}
+
+.img-fluid {
+    height: 40vh;
+    width: 100%;
+}
+
+.head {
+    color: rgb(132, 130, 130);
+}
+
+.heart {
+    font-size: 36px;
+    cursor: pointer;
+    color: #000;
+    /* Default color */
+}
+
+.heart.red {
+    color: red;
+    /* Color when clicked */
+}
+.product a {
+    text-decoration: none;
+    color: black;
+}
